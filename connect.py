@@ -3,6 +3,7 @@ import os
 import discord
 ***REMOVED***
 import random
+import test
 
 
 ***REMOVED***
@@ -25,8 +26,10 @@ import random
         ),
     ]
 
-    if message.content == '99!':
-        response = random.choice(brooklyn_99_quotes)
+    temp = test.piazza_parse(message.content)
+
+    if "piazza" in message.content:
+        response = temp
         await message.channel.send(response)
 
 
