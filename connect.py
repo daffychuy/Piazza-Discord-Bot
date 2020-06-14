@@ -26,10 +26,10 @@ import test
         ),
     ]
 
-    temp = test.piazza_parse(message.content)
+    # temp = test.piazza_parse(message.content)
 
     if "piazza.com" in message.content:
-        response = temp
+        response = test.piazza_parse(message.content)
         await message.channel.send(response)
 ***REMOVED***
 ***REMOVED***
