@@ -25,7 +25,7 @@ import os, discord, random, piazza
     if "piazza.com" in message.content:
         response = piazza.piazza_parse(message.content, EMAIL, PASSWD)
         await message.channel.send(embed=response)
-        await client.delete_message(message)
+        await message.delete()
 ***REMOVED***
 ***REMOVED***
 
