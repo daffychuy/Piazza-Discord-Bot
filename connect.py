@@ -2,10 +2,10 @@ import os, discord, random, piazza
 ***REMOVED***
 
 ***REMOVED***
-TOKEN = os.getenv['DISCORD_TOKEN']
-GUILD = os.getenv['GUILD']
-EMAIL = os.getenv['EMAIL']
-PASSWD = os.getenv['PASSWD']
+***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
 
 ***REMOVED***
 
