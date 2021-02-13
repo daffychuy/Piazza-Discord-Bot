@@ -24,7 +24,7 @@ import os, discord, random, piazza
 ***REMOVED***
     if "piazza.com" in message.content:
         response = piazza.piazza_parse(message.content, EMAIL, PASSWD)
-        await message.channel.send(response)
+        await message.channel.send(embed=response)
 ***REMOVED***
 ***REMOVED***
 
