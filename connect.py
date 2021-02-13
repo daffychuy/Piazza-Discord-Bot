@@ -1,15 +1,17 @@
-import os, discord, random, test
+import os, discord, random, piazza
+***REMOVED***
+
+***REMOVED***
+TOKEN = os.getenv['DISCORD_TOKEN']
+GUILD = os.getenv['GUILD']
+EMAIL = os.getenv['EMAIL']
+PASSWD = os.getenv['PASSWD']
+
 ***REMOVED***
 
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
@@ -17,21 +19,11 @@ import os, discord, random, test
 ***REMOVED***
 ***REMOVED***
 ***REMOVED***
-
-    # brooklyn 99 quotes just for fun
-    brooklyn_99_quotes = [
-        'I\'m the human form of the 💯 emoji.',
-        'Bingpot!',
-        (
-            'Cool. Cool cool cool cool cool cool cool, '
-            'no doubt no doubt no doubt no doubt.'
-        ),
-    ]
 
     # If message is a piazza link, call test.piazza_parse()
 ***REMOVED***
     if "piazza.com" in message.content:
-        response = test.piazza_parse(message.content)
+        response = piazza.piazza_parse(message.content, EMAIL, PASSWD)
         await message.channel.send(response)
 ***REMOVED***
 ***REMOVED***
