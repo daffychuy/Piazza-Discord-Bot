@@ -14,7 +14,7 @@ To run PiazzaBot locally, do the following:
 ```
 python3 -m venv ./env
 source ./env/bin/activate
-pip3 install -r requirements
+pip3 install -r requirements.txt
 ```
 
 2. Export your environment variables as such
