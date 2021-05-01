@@ -2,11 +2,15 @@
 ***REMOVED***
 
 ***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
+# ***REMOVED***
+# ***REMOVED***
+# ***REMOVED***
+# ***REMOVED***
 
+TOKEN = "***REMOVED***"
+GUILD = "***REMOVED***"
+EMAIL = "***REMOVED***"
+PASSWD = "***REMOVED***"
 ***REMOVED***
 
 ***REMOVED***
