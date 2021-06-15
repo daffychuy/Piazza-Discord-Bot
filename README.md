@@ -1,5 +1,6 @@
 # PiazzaBot
 Discord bot to embed Piazza posts in the designated server
+![Example of how to use](example.png)
 
 ## About
 
@@ -24,9 +25,16 @@ Rename `.env.template` to `.env` and fill in all the fields defined in the file
 
 3. Then run the program with `python3 ./connect.py`
 
+To run PiazzaBot on services:
+
+1. Set all your environment variables
+2. Deploy!
+
 **NOTE 1**: <span style="color:red">Your Piazza account **must** be enrolled in the class to get the embeded preview, or else it won't work.</span>
 
 **Note 2**: You can directly deploy onto web services that supports the use of Procfile (aka heroku)
+
+**Note 3**: To use your account for all the classes you have access to, simply put `CUR_CLASS="*"` as wildcard is supported
 
 
 ## Built With
