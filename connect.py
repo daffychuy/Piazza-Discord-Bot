@@ -8,7 +8,7 @@ GUILD = os.environ['GUILD']
 EMAIL = os.environ['EMAIL']
 PASSWD = os.environ['PASSWD']
 CUR_CLASS = os.environ['CUR_CLASS']
-REG_PATTERN = "(?:(?:https|http):\/\/(www\.)*piazza\.com\/class\/(.*?)\?cid=(\d+))"
+REG_PATTERN = "((?:https|http):\/\/(?:www\.)*piazza\.com\/class\/(.*?)\?cid=(\d+))"
 client = discord.Client()
 
 @client.event
