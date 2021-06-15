@@ -79,5 +79,5 @@ def embed_creator(data, pi_url, author):
     Read comments and full post: [here]({pi_url})
     """
     embed.add_field(name="More info:", value=pre_footer, inline=False)
-    embed.set_footer(text=f"Piazza bot by daffychuy https://github.com/daffychuy/piazza_bot")
+    embed.set_footer(text=f"Piazza bot by daffychuy https://github.com/daffychuy/PiazzaBot")
     return embed

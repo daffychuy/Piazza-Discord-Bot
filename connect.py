@@ -32,7 +32,7 @@ async def on_message(message):
             full_url = url[0]
             class_hash = url[1]
             _ = url[2] # post id
-            if class_hash == CUR_CLASS:
+            if class_hash == '*' or class_hash == CUR_CLASS:
                 response = piazza.piazza_parse(full_url, EMAIL, PASSWD, message.author)
                 await message.channel.send(embed=response)
         # Remove ability for messages to be deleted as it might contain other information
