@@ -26,7 +26,8 @@ async def on_message(message):
     # Then send piazza post to server
 
     # if "piazza.com" in message.content:
-    if urls := re.findall(REG_PATTERN, message.content):
+    urls = re.findall(REG_PATTERN, message.content)
+    if urls:
         for url in urls:
             full_url = url[0]
             class_hash = url[1]
