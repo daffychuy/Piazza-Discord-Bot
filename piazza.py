@@ -5,11 +5,11 @@ from urllib.parse import urlparse
 
 ZERO_WHITE_SPACE = "\u200b"
 
-def piazza_parse(pi_url, email, passwd):
-***REMOVED***
+def piazza_parse(pi_url, email, passwd, author):
+    '''
     Called by connect.py to get post from Piazza.
     It will format the post json into a more readable message for server.
-***REMOVED***
+    '''
 
     # Create Piazza object, login, and get the users classes
     data = {}
@@ -66,13 +66,18 @@ def piazza_parse(pi_url, email, passwd):
         elif answer['type'] == 'i_answer':
             data['answer']['instructor'] = BeautifulSoup(answer['history'][0]['content'], features='lxml').text
 
-    return embed_creator(data, pi_url)
+    return embed_creator(data, pi_url, author)
 
-def embed_creator(data, pi_url):
+def embed_creator(data, pi_url, author):
     embed=discord.Embed(title=data['question'], url=pi_url, description=data['question_text'], color=0x00fffb)
     if data['answer']['student']:
-        embed.add_field(name="Student(s) Answer", value=data['answer']['student'], inline=False)
+        embed.add_field(name="Student(s) Answer:", value=data['answer']['student'], inline=False)
     if data['answer']['instructor']:
-        embed.add_field(name="Instructor(s) Answer", value=data['answer']['instructor'], inline=False)
-    embed.set_footer(text=f"Read Full Post: {pi_url}")
+        embed.add_field(name="Instructor(s) Answer:", value=data['answer']['instructor'], inline=False)
+
+    pre_footer = f"""From: {author}
+    Read comments and full post: [here]({pi_url})
+    """
+    embed.add_field(name="More info:", value=pre_footer, inline=False)
+    embed.set_footer(text=f"Piazza bot by daffychuy, [source](https://github.com/daffychuy/piazza_bot)")
     return embed
