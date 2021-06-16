@@ -41,7 +41,7 @@ async def on_message(message):
 @client.event
 async def on_ready():
     '''
-    Prints to console when bot is connected to Discord and server.
+        Prints to console when bot is connected to Discord and server.
     '''
     print(f'{client.user} has connected to Discord!\n')
     for guild in client.guilds:
