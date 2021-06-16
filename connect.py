@@ -24,8 +24,6 @@ async def on_message(message):
 
     # If message is a piazza link, call piazza.piazza_parse()
     # Then send piazza post to server
-
-    # if "piazza.com" in message.content:
     urls = re.findall(REG_PATTERN, message.content)
     if urls:
         for url in urls:
@@ -35,9 +33,7 @@ async def on_message(message):
             if class_hash == '*' or class_hash == CUR_CLASS:
                 response = piazza.piazza_parse(full_url, EMAIL, PASSWD, message.author)
                 await message.channel.send(embed=response)
-        # Remove ability for messages to be deleted as it might contain other information
-        # await message.delete()
-
+    
     # ? Todo: Implment with @number
     elif message.content == 'raise-exception':
         raise discord.DiscordException

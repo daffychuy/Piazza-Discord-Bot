@@ -32,10 +32,14 @@ To run PiazzaBot on services:
 
 **NOTE 1**: <span style="color:red">Your Piazza account **must** be enrolled in the class to get the embeded preview, or else it won't work.</span>
 
-**Note 2**: You can directly deploy onto web services that supports the use of Procfile (aka heroku)
+**NOTE 2**: You can directly deploy onto web services that supports the use of Procfile (aka heroku)
 
-**Note 3**: To use your account for all the classes you have access to, simply put `CUR_CLASS="*"` as wildcard is supported
+**NOTE 3**: To use your account for all the classes you have access to, simply put `CUR_CLASS="*"` as wildcard is supported
 
+
+## Frequently Asked Question (FAQ)
+### Q: Can you make it a universal bot that supports multiple server per one?
+#### A: No, due to piazza-api requiring username and password, as officially they do not provide one. So storing plain text to authenticate is dangerous.
 
 ## Built With
 - Python 3
@@ -43,7 +47,7 @@ To run PiazzaBot on services:
 - [Discord.py](https://github.com/Rapptz/discord.py)
 
 ## Note
-This repository is a fork of [piazza_bot](https://github.com/zzulanas/piazza_bot) by zzulanas but modified, improved and fixed errors for my personal use.
+This repository is a fork of [piazza_bot](https://github.com/zzulanas/piazza_bot) by zzulanas all credits to original creator but this version is modified, improved and fixed errors for my personal use. Which can be quickly adapted for others to use.
 
 ## License
 This project is licensed under [MIT](LICENSE) - see the LICENSE file for details
